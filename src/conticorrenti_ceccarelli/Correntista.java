@@ -29,6 +29,7 @@ public class Correntista extends Thread{
     
     public void run()
     {
+        //Test metodo run
         System.out.println("Saldo: ");
         System.out.println(conto.getSaldo());
         System.out.println("Prelevo 50 euro");

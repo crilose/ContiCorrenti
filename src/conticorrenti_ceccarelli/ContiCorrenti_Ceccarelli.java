@@ -16,9 +16,11 @@ public class ContiCorrenti_Ceccarelli {
      */
     public static void main(String[] args) {
         
+        //Creo il conto corrente condiviso con 500 euro di partenza
         ContoCorrente ilconto = new ContoCorrente("1",500);
+        //Creo un correntista
         Correntista test = new Correntista("Marco",ilconto);
-        test.start(); //ok
+        test.start(); //avvio il correntista
     }
     
 }

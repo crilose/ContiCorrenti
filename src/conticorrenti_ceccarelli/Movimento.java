@@ -7,6 +7,7 @@ package conticorrenti_ceccarelli;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -36,8 +37,7 @@ public class Movimento {
     
     public void printMov()
     {
-        DateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-        System.out.println("Codice movimento: " + codice + ", importo: " + importo + " EUR, causale: " + causale + ", in data: " + formatter.format(data));
+        System.out.println("Codice movimento: " + codice + ", importo: " + importo + " EUR, causale: " + causale + ", in data: " + data.get(Calendar.DAY_OF_MONTH) + "/" + data.get(Calendar.MONTH) + "/" + data.get(Calendar.YEAR));
     }
     
 }

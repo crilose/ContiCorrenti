@@ -38,9 +38,8 @@ public class ContoCorrente {
     
     public void Prelievo(float importo)
     {
+        //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
-        System.out.println("Causale prelievo: ");
-        String causale = input.nextLine();
         System.out.println("Giorno prelievo: ");
         int gg = input.nextInt();
         System.out.println("Mese prelievo: ");
@@ -48,26 +47,25 @@ public class ContoCorrente {
         System.out.println("Anno prelievo: ");
         int aa = input.nextInt();
         oggi.set(aa, mm, gg);
-       
+       //Genero un codice random per il movimento
         int tempCod = (int)(Math.random()*100);
-        if(saldo >= importo)
+        if(saldo >= importo) //Se il saldo è sufficiente
         {
-            Movimento mov = new Movimento(tempCod,importo,causale,oggi);
-            listaMov.add(mov);
-            nMov++;
-            saldo =- importo;
+            Movimento mov = new Movimento(tempCod,importo,"Prelievo",oggi);  //Istanzio il movimento
+            listaMov.add(mov); //Lo inserisco nella lista
+            nMov++; //Incremento il numero di movimenti
+            saldo = saldo - importo; //Scalo l'importo dal saldo
         }
         else
         {
-            System.out.println("Saldo non sufficente, riprova.");
+            System.out.println("Saldo non sufficente, riprova."); //Comunico che il saldo non è sufficiente
         }
     }
     
     public void Versamento(float importo)
     {
+        //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
-        System.out.println("Causale versamento: ");
-        String causale = input.nextLine();
         System.out.println("Giorno versamento: ");
         int gg = input.nextInt();
         System.out.println("Mese versamento: ");
@@ -75,11 +73,12 @@ public class ContoCorrente {
         System.out.println("Anno versamento: ");
         int aa = input.nextInt();
         oggi.set(aa, mm, gg);
-       
+       //Genero un codice random per il movimento
         int tempCod = (int)(Math.random()*100);
-        Movimento mov = new Movimento(tempCod,importo,causale,oggi);
-        listaMov.add(mov);
-        nMov++;
+        Movimento mov = new Movimento(tempCod,importo,"Versamento",oggi); //Istanzio il movimento
+        listaMov.add(mov); //Lo inserisco nella lista
+        saldo = saldo + importo; //Incremento il saldo 
+        nMov++; //Aggiorno il numero di movimenti
         System.out.println("Versamento effettuato.");
     }
     
@@ -90,6 +89,7 @@ public class ContoCorrente {
     
     public void stampaMovimenti()
     {
+        /** Scorre i movimenti e stampa ciascuna descrizione */
         for(Movimento i : listaMov)
         {
             i.printMov();
