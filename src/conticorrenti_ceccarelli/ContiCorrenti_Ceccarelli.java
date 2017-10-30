@@ -15,7 +15,10 @@ public class ContiCorrenti_Ceccarelli {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        ContoCorrente ilconto = new ContoCorrente("1",500);
+        Correntista test = new Correntista("Marco",ilconto);
+        test.start();
     }
     
 }
