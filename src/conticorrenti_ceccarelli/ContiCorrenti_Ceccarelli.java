@@ -18,7 +18,7 @@ public class ContiCorrenti_Ceccarelli {
         
         ContoCorrente ilconto = new ContoCorrente("1",500);
         Correntista test = new Correntista("Marco",ilconto);
-        test.start();
+        test.start(); //ok
     }
     
 }
