@@ -29,7 +29,7 @@ public class Correntista extends Thread{
     
     public void run()
     {
-        for(int i=0;i<20;i++)
+        /*for(int i=0;i<20;i++)
         {
             System.out.println("Saldo: ");
             System.out.println(conto.getSaldo());
@@ -46,6 +46,11 @@ public class Correntista extends Thread{
                 System.out.println("Versato " + tempSoldi + " euro");
             }
         }
+                */
+        System.out.println("Saldo : " + conto.getSaldo());
+        conto.Prelievo(400);
+        System.out.println("Prelevato " + 400 + " euro");
+        System.out.println("Saldo dopo: " + conto.getSaldo());
     }
     
 }
