@@ -45,7 +45,7 @@ public class ContoCorrente {
         //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
         int gg = (int)(Math.random()*31);
-        int mm = (int)(Math.random()*12);
+        int mm = (int)(Math.random()*12) + 1;
         int aa = 2017;
         oggi.set(aa, mm, gg);
        //Genero un codice random per il movimento
@@ -69,7 +69,7 @@ public class ContoCorrente {
         //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
         int gg = (int)(Math.random()*31);
-        int mm = (int)(Math.random()*12);
+        int mm = (int)(Math.random()*12) + 1;
         int aa = 2017;
         oggi.set(aa, mm, gg);
        //Genero un codice random per il movimento
