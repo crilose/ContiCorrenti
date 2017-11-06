@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -20,7 +20,9 @@ public class ContiCorrenti_Ceccarelli {
         ContoCorrente ilconto = new ContoCorrente("1",500);
         //Creo un correntista
         Correntista test = new Correntista("Marco",ilconto);
+        Correntista test2 = new Correntista("Filippo",ilconto);
         test.start(); //avvio il correntista
+        test2.start();
     }
     
 }

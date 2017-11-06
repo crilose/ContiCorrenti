@@ -40,12 +40,9 @@ public class ContoCorrente {
     {
         //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
-        System.out.println("Giorno prelievo: ");
-        int gg = input.nextInt();
-        System.out.println("Mese prelievo: ");
-        int mm = input.nextInt();
-        System.out.println("Anno prelievo: ");
-        int aa = input.nextInt();
+        int gg = (int)(Math.random()*31);
+        int mm = (int)(Math.random()*12);
+        int aa = 2017;
         oggi.set(aa, mm, gg);
        //Genero un codice random per il movimento
         int tempCod = (int)(Math.random()*100);
@@ -66,12 +63,9 @@ public class ContoCorrente {
     {
         //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
-        System.out.println("Giorno versamento: ");
-        int gg = input.nextInt();
-        System.out.println("Mese versamento: ");
-        int mm = input.nextInt();
-        System.out.println("Anno versamento: ");
-        int aa = input.nextInt();
+        int gg = (int)(Math.random()*31);
+        int mm = (int)(Math.random()*12);
+        int aa = 2017;
         oggi.set(aa, mm, gg);
        //Genero un codice random per il movimento
         int tempCod = (int)(Math.random()*100);

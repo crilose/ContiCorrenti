@@ -29,19 +29,23 @@ public class Correntista extends Thread{
     
     public void run()
     {
-        //Test metodo run
-        System.out.println("Saldo: ");
-        System.out.println(conto.getSaldo());
-        System.out.println("Prelevo 50 euro");
-        conto.Prelievo(50);
-        System.out.println("Saldo: ");
-        System.out.println(conto.getSaldo());
-        System.out.println("Verso 100 euro");
-        conto.Versamento(100);
-        System.out.println("Saldo: ");
-        System.out.println(conto.getSaldo());
-        System.out.println("Stampo i movimenti: ");
-        conto.stampaMovimenti();
+        for(int i=0;i<20;i++)
+        {
+            System.out.println("Saldo: ");
+            System.out.println(conto.getSaldo());
+            int tempSoldi = (int)(Math.random()*500);
+            int scelta = (int)(Math.random()*100);
+            if(scelta > 50)
+            {
+                conto.Prelievo(tempSoldi);
+                System.out.println("Prelevato " + tempSoldi + " euro");
+            }
+            else
+            {
+                conto.Versamento(tempSoldi);
+                System.out.println("Versato " + tempSoldi + " euro");
+            }
+        }
     }
     
 }
