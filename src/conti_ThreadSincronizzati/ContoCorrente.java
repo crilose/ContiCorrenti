@@ -19,15 +19,16 @@ public class ContoCorrente {
     
     private String ncc;
     private float saldo;
-    private ArrayList<Movimento> listaMov = new ArrayList<Movimento>();
+    private ArrayList<Movimento> listaMov;
     private int nMov;
-    Scanner input = new Scanner(System.in);
+    
     
     public ContoCorrente(String num)
     {
         ncc = num;
         nMov = 0;
         saldo = 0;
+        listaMov = new ArrayList<Movimento>();
     }
     
     public ContoCorrente(String num, float saldo)
@@ -35,10 +36,12 @@ public class ContoCorrente {
         ncc = num;
         nMov = 0;
         this.saldo = saldo;
+        listaMov = new ArrayList<Movimento>();
     }
     
     public synchronized void Prelievo(float importo)
     {
+        Scanner input = new Scanner(System.in);
         //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
         int gg = (int)(Math.random()*31);
@@ -62,6 +65,7 @@ public class ContoCorrente {
     
     public synchronized void Versamento(float importo)
     {
+        Scanner input = new Scanner(System.in);
         //Creo la data e chiedo la data del movimento
         GregorianCalendar oggi = new GregorianCalendar();
         int gg = (int)(Math.random()*31);

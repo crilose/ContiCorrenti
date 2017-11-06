@@ -19,12 +19,12 @@ public class Movimento {
     private int codice;
     private float importo;
     private String causale;
-    GregorianCalendar data = new GregorianCalendar();
-    
+    GregorianCalendar data;
     public Movimento(float imp, String causa)
     {
         importo = imp;
         causale = causa;
+        data = new GregorianCalendar();
     }
     
     public Movimento(int cod, float imp, String causa, GregorianCalendar data)
@@ -33,6 +33,7 @@ public class Movimento {
         importo = imp;
         causale = causa;
         this.data = data;
+        data = new GregorianCalendar();
     }
     
     public void printMov()
