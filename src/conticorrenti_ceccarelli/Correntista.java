@@ -7,7 +7,7 @@ package conticorrenti_ceccarelli;
 
 /**
  *
- * @author informatica
+ * @author Cristiano
  */
 public class Correntista extends Thread{
     

@@ -9,7 +9,7 @@ import conticorrenti_ceccarelli.*;
 
 /**
  *
- * @author Studenti
+ * @author Cristiano
  */
 public class ContiCorrenti_Ceccarelli {
 
@@ -27,7 +27,7 @@ public class ContiCorrenti_Ceccarelli {
         Correntista test = new Correntista("Marco",ilconto);
         Correntista test2 = new Correntista("Filippo",ilconto);
         test.start(); //avvio il correntista
-        test2.start();
+        test2.start(); //avvio il secondo correntista
     }
     
 }

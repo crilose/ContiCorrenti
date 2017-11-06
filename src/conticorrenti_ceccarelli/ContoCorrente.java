@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Studenti
+ * @author Cristiano
  */
 public class ContoCorrente {
     

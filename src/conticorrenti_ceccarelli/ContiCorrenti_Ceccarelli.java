@@ -7,7 +7,7 @@ package conticorrenti_ceccarelli;
 
 /**
  *
- * @author Studenti
+ * @author Cristiano
  */
 public class ContiCorrenti_Ceccarelli {
 

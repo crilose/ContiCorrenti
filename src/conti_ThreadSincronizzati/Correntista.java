@@ -9,7 +9,7 @@ import conticorrenti_ceccarelli.*;
 
 /**
  *
- * @author informatica
+ * @author Cristiano
  */
 public class Correntista extends Thread{
     
@@ -48,6 +48,7 @@ public class Correntista extends Thread{
                 System.out.println("Versato " + tempSoldi + " euro");
             }
         }
+        conto.stampaMovimenti();
     }
     
 }
