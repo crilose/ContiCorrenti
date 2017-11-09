@@ -51,7 +51,6 @@ public class Correntista extends Thread{
         conto.stampaMovimenti();*/
         System.out.println("Saldo : " + conto.getSaldo());
         conto.Prelievo(400);
-        System.out.println("Prelevato " + 400 + " euro");
         System.out.println("Saldo dopo: " + conto.getSaldo());
     }
     
