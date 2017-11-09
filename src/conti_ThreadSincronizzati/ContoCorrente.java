@@ -56,6 +56,7 @@ public class ContoCorrente {
             listaMov.add(mov); //Lo inserisco nella lista
             nMov++; //Incremento il numero di movimenti
             saldo = saldo - importo; //Scalo l'importo dal saldo
+            System.out.println("Prelevato " + importo + " euro.");
         }
         else
         {
